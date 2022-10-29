@@ -87,7 +87,7 @@ With this approach our graph `G = (V, E)` will consist of:
 
 In Rust it'll look like this:
 
-```
+```rust
 pub struct Graph {
     nodes: Vec<Node>,
     edges: Vec<Edge>,
@@ -96,7 +96,7 @@ pub struct Graph {
 
 Each `Node` and `Edge` can be identified by an index:
 
-```
+```rust
 pub type NodeIx = usize;
 pub type EdgeIx = usize;
 ```
@@ -104,7 +104,7 @@ pub type EdgeIx = usize;
 Each node might contain an edge index,
 which is the start of a linked list of outgoing edges.
 
-```
+```rust
 type struct Node {
    edge: Option<EdgeIx>
 }
@@ -112,7 +112,7 @@ type struct Node {
 
 Edges could be represented like this:
 
-```
+```rust
 pub struct Edge {
    node: NodeIx,
    next: Option<EdgeIx>,
