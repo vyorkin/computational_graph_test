@@ -88,8 +88,8 @@ fn polynomial() {
     y.set(4f32);
 
     // 2^3 + 2*4 + 12 = 28
-    // ^     ^
-    // x     y
+    // ^       ^
+    // x       y
 
     assert_eq!(g.compute(), Some(28f32));
 }
